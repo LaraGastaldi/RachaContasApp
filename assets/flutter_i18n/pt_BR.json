@@ -1,0 +1,47 @@
+{
+  "screens": {
+    "login": {
+      "email": {
+        "label": "E-mail",
+        "already_exists": "Esse e-mail já está em uso",
+        "invalid": "E-mail inválido",
+        "required": "E-mail é obrigatório"
+      },
+      "password": {
+        "label": "Senha",
+        "invalid": "Senha inválida",
+        "required": "Senha é obrigatória"
+      },
+      "success": "Login realizado com sucesso",
+      "error": "Erro ao realizar login",
+    },
+    "register": {
+      "name": {
+        "label": "Nome",
+        "required": "Nome é obrigatório"
+      },
+      "email": {
+        "label": "E-mail",
+        "already_exists": "Esse e-mail já está em uso",
+        "invalid": "E-mail inválido",
+        "required": "E-mail é obrigatório"
+      },
+      "password": {
+        "label": "Senha",
+        "invalid": "Senha inválida",
+        "required": "Senha é obrigatória"
+      },
+      "phone": {
+        "label": "Telefone",
+        "invalid": "Telefone inválido",
+        "required": "Telefone é obrigatório"
+      },
+      "success": "Cadastro realizado com sucesso",
+      "error": "Erro ao realizar cadastro",
+    },
+    "home": {
+      "title": "Bem-vindo ao app",
+      "logout": "Sair"
+    }
+  }
+}
