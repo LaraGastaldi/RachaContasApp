@@ -15,14 +15,6 @@ String? jwt;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   registerProviders();
-
-  Future<void> main() async {
-    WidgetsFlutterBinding.ensureInitialized();
-
-    jwt = await const FlutterSecureStorage().read(key: 'token');
-    runApp(const MyApp());
-  }
-
   runApp(const MyApp());
 }
 
@@ -38,7 +30,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
-        '/': (context) => jwt != null ? DashboardScreen() : LoginScreen(),
+        '/': (context) => DashboardScreen(),
         '/login': (context) => LoginScreen(),
         '/home': (context) => DashboardScreen(),
         '/register': (context) => RegisterScreen(),

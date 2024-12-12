@@ -224,45 +224,49 @@ class _AddDebtScreenState extends State<AddDebtScreen> {
                                 color: Colors.transparent, height: 20.0),
                             Row(children: [
                               Expanded(
-                                child: DropdownButton<String>(
-                                    padding: const EdgeInsets.all(5.0),
-                                    menuWidth: 200.0,
-                                    value: widget
-                                        .addDebtController
-                                        .userController[index]
-                                        .relationshipController
-                                        .text,
-                                    icon: const Icon(Icons.arrow_downward),
-                                    elevation: 16,
-                                    style: const TextStyle(
-                                        color: Colors.deepPurple),
-                                    // underline: Container(
-                                    //   height: 2,
-                                    //   color: Colors.deepPurpleAccent,
-                                    // ),
-                                    onChanged: (String? value) {
-                                      // This is called when the user selects an item.
-                                      setState(() {
-                                        widget
+                                child: StatefulBuilder(
+                                  builder: (BuildContext context, StateSetter setState) {
+                                    return DropdownButton<String>(
+                                        padding: const EdgeInsets.all(5.0),
+                                        menuWidth: 200.0,
+                                        value: widget
                                             .addDebtController
                                             .userController[index]
                                             .relationshipController
-                                            .text = value!;
-                                      });
-                                    },
-                                    items: const [
-                                      DropdownMenuItem<String>(
-                                        value: 'payer',
-                                        child: Text('Pagador'),
-                                      ),
-                                      DropdownMenuItem<String>(
-                                        value: 'receiver',
-                                        child: Text('Credor'),
-                                      ),
-                                      DropdownMenuItem<String>(
-                                          value: 'witness',
-                                          child: Text('Testemunha'))
-                                    ]),
+                                            .text,
+                                        icon: const Icon(Icons.arrow_downward),
+                                        elevation: 16,
+                                        style: const TextStyle(
+                                            color: Colors.deepPurple),
+                                        // underline: Container(
+                                        //   height: 2,
+                                        //   color: Colors.deepPurpleAccent,
+                                        // ),
+                                        onChanged: (String? value) {
+                                          // This is called when the user selects an item.
+                                          setState(() {
+                                            widget
+                                                .addDebtController
+                                                .userController[index]
+                                                .relationshipController
+                                                .text = value!;
+                                          });
+                                        },
+                                        items: const [
+                                          DropdownMenuItem<String>(
+                                            value: 'payer',
+                                            child: Text('Pagador'),
+                                          ),
+                                          DropdownMenuItem<String>(
+                                            value: 'receiver',
+                                            child: Text('Credor'),
+                                          ),
+                                          DropdownMenuItem<String>(
+                                              value: 'witness',
+                                              child: Text('Testemunha'))
+                                        ]);
+                                  },
+                                )
                               )
                             ]),
                             const Divider(
@@ -462,31 +466,31 @@ class _AddDebtScreenState extends State<AddDebtScreen> {
                                         ),
                                       );
                                     }),
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 10.0),
-                                  child: InkWell(
-                                    onTap: () {},
-                                    child: Container(
-                                      width: 100.0,
-                                      height: 100.0,
-                                      decoration: BoxDecoration(
-                                        color: Colors.black12,
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      child: const Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Icon(Icons.add_photo_alternate),
-                                          Text('Selecionar foto')
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                                // Padding(
+                                //   padding: const EdgeInsets.only(right: 10.0),
+                                //   child: InkWell(
+                                //     onTap: () {},
+                                //     child: Container(
+                                //       width: 100.0,
+                                //       height: 100.0,
+                                //       decoration: BoxDecoration(
+                                //         color: Colors.black12,
+                                //         borderRadius:
+                                //             BorderRadius.circular(8.0),
+                                //       ),
+                                //       child: const Column(
+                                //         mainAxisAlignment:
+                                //             MainAxisAlignment.center,
+                                //         crossAxisAlignment:
+                                //             CrossAxisAlignment.center,
+                                //         children: [
+                                //           Icon(Icons.add_photo_alternate),
+                                //           Text('Selecionar foto')
+                                //         ],
+                                //       ),
+                                //     ),
+                                //   ),
+                                // ),
                               ],
                             ),
                             if (widget.addDebtController.proofController[index]

@@ -56,6 +56,11 @@ class RegisterController extends GetxController {
                 backgroundColor: Colors.greenAccent);
             Get.offAllNamed('/login');
           } else {
+            if (auth.data['email'] != null) {
+              Get.snackbar('Registro', 'Email já cadastrado',
+                  backgroundColor: Colors.redAccent);
+              return;
+            }
             log('Error on register: ${auth.data}');
             Get.snackbar('Registro', 'Credenciais inválidas',
                 backgroundColor: Colors.redAccent);

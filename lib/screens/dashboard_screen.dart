@@ -1,6 +1,7 @@
 import 'package:draggable_home/draggable_home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get/get.dart';
 import 'package:rachacontas/models/Debt.dart';
 import 'package:rachacontas/providers.dart';
@@ -31,6 +32,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     setState(() {
       loading = true;
     });
+
 
     getIt<ApiService>().getDebts().then((value) {
       if (value.success) {

@@ -84,30 +84,30 @@ class _ProofOptionsDialogState extends State<ProofOptionsDialog> {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10.0),
-                        child: GestureDetector(
-                          onTap: () {
-
-                          },
-                          child: Container(
-                            width: 100.0,
-                            height: 100.0,
-                            decoration: BoxDecoration(
-                              color: Colors.black12,
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: const Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(Icons.image),
-                                Text('Selecionar foto')
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(right: 10.0),
+                      //   child: GestureDetector(
+                      //     onTap: () {
+                      //
+                      //     },
+                      //     child: Container(
+                      //       width: 100.0,
+                      //       height: 100.0,
+                      //       decoration: BoxDecoration(
+                      //         color: Colors.black12,
+                      //         borderRadius: BorderRadius.circular(8.0),
+                      //       ),
+                      //       child: const Column(
+                      //         mainAxisAlignment: MainAxisAlignment.center,
+                      //         crossAxisAlignment: CrossAxisAlignment.center,
+                      //         children: [
+                      //           Icon(Icons.image),
+                      //           Text('Selecionar foto')
+                      //         ],
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   );
                 }),

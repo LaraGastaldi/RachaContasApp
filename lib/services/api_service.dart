@@ -20,10 +20,10 @@ class ApiService {
         data: data,
         options: Options(
           method: method,
-          receiveTimeout: const Duration(seconds: 5),
-          sendTimeout: const Duration(seconds: 5),
+          receiveTimeout: const Duration(seconds: 10),
+          sendTimeout: const Duration(seconds: 10),
           validateStatus: (status) {
-            return status! < 500;
+            return true;
           },
           contentType: Headers.jsonContentType,
           headers: {
@@ -39,10 +39,10 @@ class ApiService {
           "${await EnvService.get('API_URL')}/refresh",
           options: Options(
             method: 'POST',
-            receiveTimeout: const Duration(seconds: 5),
-            sendTimeout: const Duration(seconds: 5),
+            receiveTimeout: const Duration(seconds: 10),
+            sendTimeout: const Duration(seconds: 10),
             validateStatus: (status) {
-              return status! < 500;
+              return true;
             },
             contentType: Headers.jsonContentType,
             headers: {

@@ -97,11 +97,6 @@ class _DebtScreenState extends State<DebtScreen> {
                             ? Colors.grey
                             : Colors.green)),
               ),
-              InkWell(
-                onTap: () {},
-                child:
-                    const Text('Excluir', style: TextStyle(color: Colors.red)),
-              ),
             ],
           ),
         ),
@@ -163,10 +158,6 @@ class _DebtScreenState extends State<DebtScreen> {
                                     }
                                   });
                                 },
-                              ),
-                              IconButton(
-                                icon: const Icon(Icons.edit),
-                                onPressed: () {},
                               ),
                             ],
                           )),
